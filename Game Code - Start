@@ -3,45 +3,83 @@ firstname = input('Write your first name: ')
 lastname = input('Write your last name: ')
 
 #print(f'Hello {yourname}')
-
+print()
 print(f'Special Agent {lastname}, you have been tasked to assist 911 operators with a kidnapping report.')
-print("Open your .")
-print("The house is dated, creaky, and falling apart. You walk in the front door.")
-print("Do you want to enter the living room or the dining room?")
+print("Open your github folder or terminal to get started.")
+print('Hit enter to move forward.')
+### Prompt user for a choice
+q1choice = input("> ")
+print()
+
+if(q1choice == ''):
+    print("Find the name of the missing victim.")
+else:
+  print("Invalid choice. Please hit enter to continue.")
 
 ### Prompt user for a choice
-roomChoice = input("> ")
-
-if(roomChoice == "living room"):
-  print("You enter the living room.")
-  print("As you walk in, you see a sleeping pitbull guarding some gold jewelry.")
-  print("Do you want to steal the jewelry from the pitbull?")
-
-  pitBullChoice = input("> ")
-
-  if(pitBullChoice == "yes"):
-    print("You attempt to steal the jewelry, but it wakes up and rips you to shreds.")
-    print("You are now dead.")
-  elif(pitBullChoice == "no"):
-    print("You decide to not steal the dog's jewelry.")
-    print("You turn around and leave the house safely.")
-  else:
-    print("Invalid choice. Please enter yes or no.")
-elif(roomChoice == "dining room"):
-  print("You chose to go into the dining room.")
-  print("As you walk in, you see a shiny vase on the table.")
-  print("Do you want to open the vase?")
-
-  vaseChoice = input("> ")
-
-  if(vaseChoice == "yes"):
-    print("You open the vase and find a pile of bones!")
-  elif(vaseChoice == "no"):
-    print("You decide not to open the shiny vase.")
-    print("As you turn to leave, you hear a cracking sound coming from the corner.")
-    print("A dark figure with glowing red eyes launches at you, knocking you unconcious")
-    print("You wake up in your bed. It was all a dream.")
-  else:
-    print("Invalid choice. Please enter yes or no.")
+missingpersonsname = input("> ")
+print()
+if(missingpersonsname == "Casey Cooke"):
+    print(f"Great work Agent {lastname}.\nNow that we have a lead on the victim's name, can you find out where she was last scene?")
+elif(missingpersonsname == "casey cooke"):
+    print(f"Great work Agent {lastname}.\nNow that we have a lead on the victim's name, can you find out where she was last scene?")
 else:
-  print("Invalid choice. Please enter living room or dining room.")
+    print(f"Unfortunately, this is not who we are looking for Agent {lastname}.")
+
+
+pastlocation = input("> ")   
+print()
+if(pastlocation == "PA"):
+    print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
+elif(pastlocation == "Philidelphia"):
+    print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
+elif(pastlocation == "Pennsylvania"):
+    print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
+elif(pastlocation == "Philidelphia, PA"):
+    print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
+else:
+    print(f"This is incorrect. Try again")
+
+hiddenfile = input("> ")
+print()
+if(hiddenfile == "QRcode"):
+    print(f"Oh man! You're genius Agent {lastname}.")
+elif(hiddenfile == "qrcode"):
+    print(f"Oh man! You're genius Agent {lastname}.")
+elif(hiddenfile == "QR"):
+    print(f"Oh man! You're genius Agent {lastname}.")
+elif(hiddenfile == "qr"):
+    print(f"Oh man! You're genius Agent {lastname}.")
+elif(hiddenfile == "qr code"):
+    print(f"Oh man! You're genius Agent {lastname}.")
+elif(hiddenfile == "QR code"):
+    print(f"Oh man! You're genius Agent {lastname}.")
+elif(hiddenfile == "QR Code"):
+    print(f"Oh man! You're a genius Agent {lastname}.")
+else:
+    print(f"So close! Let's try again.")
+print()
+print()
+print("Okay, let's scan this QR code.\nOnce complete respond 'Yes' below.")
+scancomplete = input("> ")
+print()
+if(scancomplete == "Yes"):
+    print(f"Hm, it sounds like a ferry horn.\nBut that's odd because there should'nt be any ferries in PA.\nTry to find the nearest city with ferries (be sure to have appropriate Capitalization).")
+else:
+    print(f"We can't jump ahead just yet!")
+
+ferrylocation = input("> ")
+print()
+if(ferrylocation == "NYC"):
+    print(f"Stellar job. I think you just found a new lead. I'll go report this to Agent Davel.")
+elif(ferrylocation == "New York"):
+    print(f"Stellar job. I think you just found a new lead. I'll go report this to Agent Davel.")
+elif(ferrylocation == "New York City"):
+    print(f"Stellar job. I think you just found a new lead. I'll go report this to Agent Davel.")
+else:
+    print(f"Incorrect. Try again!")
+
+print('Hit enter to recieve the flag.')
+ctfcomplete = input("> ")
+if(ctfcomplete == ''):
+    print("youARE{aR0Ck5T4r}")
