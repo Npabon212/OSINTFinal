@@ -5,81 +5,71 @@ lastname = input('Write your last name: ')
 #print(f'Hello {yourname}')
 print()
 print(f'Special Agent {lastname}, you have been tasked to assist 911 operators with a kidnapping report.')
-print("Open your github folder or terminal to get started.")
-print('Hit enter to move forward.')
-### Prompt user for a choice
-q1choice = input("> ")
-print()
-
-if(q1choice == ''):
-    print("Find the name of the missing victim.")
-else:
-  print("Invalid choice. Please hit enter to continue.")
+print("Open your github folder and run the startcode to get started.")
+print('Type "ok" to move forward.')
 
 ### Prompt user for a choice
-missingpersonsname = input("> ")
+q1choice = ''
+while q1choice not in ['ok']:
+    q1choice = input("> ").strip().lower()
+if q1choice == "":
+    print("You must type 'ok' to move forward.")
+elif q1choice not in ['ok']:
+    print("Invalid choice.")
+print("Find the name of the missing victim.")
+
+### Prompt user for a choice
+missingpersonsname = ''
+while missingpersonsname not in ['casey cooke','Casey Cooke','Casey cooke']:
+    missingpersonsname = input("> ").strip()
+    if missingpersonsname == "":
+        print('You must provide a valid response!')
+    elif missingpersonsname not in ['casey cooke','Casey Cooke','Casey cooke']:
+        print(f'Unfortunately, this is not who we are looking for Agent {lastname}.')
+print(f"Great work Agent {lastname}.\nNow that we have a lead on the victim's name, can you find out where she was last seen?")
+
+pastlocation = ''
+while pastlocation not in ['pa','philadelphia','pennsylvania','philadelphia','pa']:
+    pastlocation = input("> ").strip().lower()
+    if(pastlocation == ""):
+        print(f"This is incorrect. Try again")
+    elif pastlocation not in ['pa','philadelphia','pennsylvania','philadelphia','pa']:
+        print(f"This is incorrect. Try again")
+print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
+
+hiddenfile = ''
+while hiddenfile not in ['qr code','audio file','qrcode']:
+    hiddenfile = input("> ").strip().lower()
+    if hiddenfile == "":
+        print('You must provide a valid response!')
+    elif hiddenfile not in['qr code','audio file','qrcode']:
+        print(f"So close! Let's try again.")
+print(f"Oh man! You're a genius Agent {lastname}.")
 print()
-if(missingpersonsname == "Casey Cooke"):
-    print(f"Great work Agent {lastname}.\nNow that we have a lead on the victim's name, can you find out where she was last scene?")
-elif(missingpersonsname == "casey cooke"):
-    print(f"Great work Agent {lastname}.\nNow that we have a lead on the victim's name, can you find out where she was last scene?")
-else:
-    print(f"Unfortunately, this is not who we are looking for Agent {lastname}.")
+print("Okay, let's scan this QR code.\nOnce complete type 'Next' below.")
+
+scancomplete = ''
+while scancomplete not in ['Next']:
+    scancomplete = input("> ").strip()
+    if scancomplete == '':
+        print(f"We can't jump ahead just yet!")
+    if scancomplete not in ['Next']:
+        print('Please type "Next" to continue.')
+print(f"Hm, it sounds like a ferry horn.\nBut that's odd because there should'nt be any ferries in PA.\nTry to find the nearest city with ferries (be sure to have appropriate Capitalization).")
 
 
-pastlocation = input("> ")   
-print()
-if(pastlocation == "PA"):
-    print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
-elif(pastlocation == "Philidelphia"):
-    print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
-elif(pastlocation == "Pennsylvania"):
-    print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
-elif(pastlocation == "Philidelphia, PA"):
-    print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
-else:
-    print(f"This is incorrect. Try again")
+ferrylocation = ""
+while ferrylocation not in ['NYC','New York','New York City']:
+    ferrylocation = input("> ").strip()
+    if ferrylocation == "":
+        print("You must provide a location!")
+    elif ferrylocation not in ['NYC','New York','New York City']:
+        print("Incorrect. Try again!")
+print(f"Stellar job. I think you just found a new lead. I'll go report this to Agent Davel.")
 
-hiddenfile = input("> ")
-print()
-if(hiddenfile == "QRcode"):
-    print(f"Oh man! You're genius Agent {lastname}.")
-elif(hiddenfile == "qrcode"):
-    print(f"Oh man! You're genius Agent {lastname}.")
-elif(hiddenfile == "QR"):
-    print(f"Oh man! You're genius Agent {lastname}.")
-elif(hiddenfile == "qr"):
-    print(f"Oh man! You're genius Agent {lastname}.")
-elif(hiddenfile == "qr code"):
-    print(f"Oh man! You're genius Agent {lastname}.")
-elif(hiddenfile == "QR code"):
-    print(f"Oh man! You're genius Agent {lastname}.")
-elif(hiddenfile == "QR Code"):
-    print(f"Oh man! You're a genius Agent {lastname}.")
-else:
-    print(f"So close! Let's try again.")
-print()
-print()
-print("Okay, let's scan this QR code.\nOnce complete respond 'Yes' below.")
-scancomplete = input("> ")
-print()
-if(scancomplete == "Yes"):
-    print(f"Hm, it sounds like a ferry horn.\nBut that's odd because there should'nt be any ferries in PA.\nTry to find the nearest city with ferries (be sure to have appropriate Capitalization).")
-else:
-    print(f"We can't jump ahead just yet!")
-
-ferrylocation = input("> ")
-print()
-if(ferrylocation == "NYC"):
-    print(f"Stellar job. I think you just found a new lead. I'll go report this to Agent Davel.")
-elif(ferrylocation == "New York"):
-    print(f"Stellar job. I think you just found a new lead. I'll go report this to Agent Davel.")
-elif(ferrylocation == "New York City"):
-    print(f"Stellar job. I think you just found a new lead. I'll go report this to Agent Davel.")
-else:
-    print(f"Incorrect. Try again!")
-
-print('Hit enter to recieve the flag.')
-ctfcomplete = input("> ")
-if(ctfcomplete == ''):
-    print("youARE{aR0Ck5T4r}")
+ctfcomplete = ''
+while ctfcomplete not in ['OK']:
+    ctfcomplete = input("> ").strip().upper()
+    if ctfcomplete not in ['OK']:
+        print('Please type "OK" to continue.')
+print("youARE{aR0Ck5T4r}")
