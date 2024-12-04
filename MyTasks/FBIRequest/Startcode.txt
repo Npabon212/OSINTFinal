@@ -1,11 +1,11 @@
 ### Print a welcome message
-firstname = input('Write your first name: ')
-lastname = input('Write your last name: ')
+firstname = input('Write your First Name: ')
+lastname = input('Write your Last Name: ')
 
 #print(f'Hello {yourname}')
 print()
 print(f'Special Agent {lastname}, you have been tasked to assist 911 operators with a kidnapping report.')
-print("Open your github folder and run the startcode to get started.")
+print("Open your github folder and run the startcode to get started.\nPlease note the disclaimer found in your folder.")
 print('Type "ok" to move forward.')
 
 ### Prompt user for a choice
@@ -16,7 +16,7 @@ if q1choice == "":
     print("You must type 'ok' to move forward.")
 elif q1choice not in ['ok']:
     print("Invalid choice.")
-print("Find the name of the missing victim.")
+print("Open the JPEG and find the name of the missing victim.\nHint: You may find an image search engine helpful.")
 
 ### Prompt user for a choice
 missingpersonsname = ''
@@ -26,7 +26,7 @@ while missingpersonsname not in ['casey cooke','Casey Cooke','Casey cooke']:
         print('You must provide a valid response!')
     elif missingpersonsname not in ['casey cooke','Casey Cooke','Casey cooke']:
         print(f'Unfortunately, this is not who we are looking for Agent {lastname}.')
-print(f"Great work Agent {lastname}.\nNow that we have a lead on the victim's name, can you find out where she was last seen?")
+print(f"Great work Agent {lastname}.\nNow that we have a lead on the victim's name, can you find out where she was last SCENE?\nHint: Filming location.")
 
 pastlocation = ''
 while pastlocation not in ['pa','philadelphia','pennsylvania','philadelphia','pa']:
@@ -35,7 +35,7 @@ while pastlocation not in ['pa','philadelphia','pennsylvania','philadelphia','pa
         print(f"This is incorrect. Try again")
     elif pastlocation not in ['pa','philadelphia','pennsylvania','philadelphia','pa']:
         print(f"This is incorrect. Try again")
-print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside.")
+print(f"Nice Agent {lastname}!\nHey, wait a minute.\nAgent Davel found something hidden inside the PNG...\nTake a closer look and tell me what was inside (ensure your respond is in lowercase).\nHint: _ _  _ _ _ _ ")
 
 hiddenfile = ''
 while hiddenfile not in ['qr code','audio file','qrcode']:
@@ -55,7 +55,7 @@ while scancomplete not in ['Next']:
         print(f"We can't jump ahead just yet!")
     if scancomplete not in ['Next']:
         print('Please type "Next" to continue.')
-print(f"Hm, it sounds like a ferry horn.\nBut that's odd because there should'nt be any ferries in PA.\nTry to find the nearest city with ferries (be sure to have appropriate Capitalization).")
+print(f"Hm, it sounds like a ferry horn.\nBut that's odd because there are no ferries in PA.\nTry to find the nearest major city on the east coast with ferries (use appropriate Capitalization).\nHint: You can catch the ferry at one its boroughs.")
 
 
 ferrylocation = ""
@@ -65,11 +65,11 @@ while ferrylocation not in ['NYC','New York','New York City']:
         print("You must provide a location!")
     elif ferrylocation not in ['NYC','New York','New York City']:
         print("Incorrect. Try again!")
-print(f"Stellar job. I think you just found a new lead. I'll go report this to Agent Davel.")
+print(f"Stellar job. I think you just found a new lead. I'll go report this to Agent Davel. Please type 'OK' to continue.")
 
 ctfcomplete = ''
 while ctfcomplete not in ['OK']:
     ctfcomplete = input("> ").strip().upper()
     if ctfcomplete not in ['OK']:
         print('Please type "OK" to continue.')
-print("youARE{aR0Ck5T4r}")
+print("itc101{youAREaR0Ck5T4r}")
