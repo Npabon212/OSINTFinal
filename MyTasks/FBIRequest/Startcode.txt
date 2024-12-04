@@ -16,7 +16,7 @@ if q1choice == "":
     print("You must type 'ok' to move forward.")
 elif q1choice not in ['ok']:
     print("Invalid choice.")
-print("Open the JPEG and find the name of the missing victim.\nHint: You may find an image search engine helpful.")
+print("Open the PNG and find the name of the missing victim.\nHint: You may find an image search engine helpful.")
 
 ### Prompt user for a choice
 missingpersonsname = ''
